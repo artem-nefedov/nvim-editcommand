@@ -93,7 +93,7 @@ function! s:edit_command()
   " put command into buffer
   silent put =g:editcommand_before
   " remove the (empty) first line
-  0,1delete
+  0,1delete _
 endfunction
 
 tnoremap <silent> <Plug>EditCommand <c-\><c-n>:call <SID>extract_command()<cr>A<c-c><c-\><c-n>:call <SID>set_terminal_autocmd()<cr>:call <SID>edit_command()<cr>
